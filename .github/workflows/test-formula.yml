@@ -1,0 +1,20 @@
+name: Test formula
+
+on:
+  pull_request:
+
+jobs:
+  test-formula:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-14, macos-15-intel]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install and test the formula
+        run: |
+          set -euo pipefail
+          brew install --formula ./Formula/nodemantis.rb
+          brew test nodemantis
