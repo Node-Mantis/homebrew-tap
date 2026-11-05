@@ -3,9 +3,9 @@ class Nodemantis < Formula
   homepage "https://github.com/Node-Mantis/CleanSlate"
   # Prerelease versions do not sort reliably from the URL alone: always pin
   # url, version, and sha256 together (scripts/bump.sh does all three).
-  url "https://registry.npmjs.org/node-mantis/-/node-mantis-0.1.0-alpha.10.tgz"
-  version "0.1.0-alpha.10"
-  sha256 "c0e4857176265688e5647ba31177b21f599c4db63db31bc3d88b5fa44e95775c"
+  url "https://registry.npmjs.org/node-mantis/-/node-mantis-0.1.0.tgz"
+  version "0.1.0"
+  sha256 "efe595c500cf6f19ebae7190dbbdd2d3268cc960be588ac83b40dac95bbb37a8"
   license :cannot_represent
 
   depends_on "node"
@@ -26,10 +26,11 @@ class Nodemantis < Formula
 
   def caveats
     <<~EOS
-      Configure credentials and install a browser once:
+      NodeMantis drives your installed Google Chrome. Configure credentials once:
         nodemantis configure --api-key "sk_live_<copy-from-dashboard>"
-        nodemantis install-browser
       Verify with: nodemantis doctor
+      If you also installed NodeMantis with npm or pip, the first nodemantis on
+      your PATH runs; nodemantis doctor shows which one that is.
     EOS
   end
 

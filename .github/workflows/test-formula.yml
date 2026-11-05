@@ -2,19 +2,25 @@ name: Test formula
 
 on:
   pull_request:
+  workflow_dispatch:
 
 jobs:
   test-formula:
     strategy:
       fail-fast: false
       matrix:
-        os: [macos-14, macos-15-intel]
+        # macos-14 runners were retired on 2026-11-02.
+        os: [macos-15, macos-15-intel]
     runs-on: ${{ matrix.os }}
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
-      - name: Install and test the formula
+      - name: Install and test the formula from this checkout as a tap
         run: |
           set -euo pipefail
-          brew install --formula ./Formula/nodemantis.rb
-          brew test nodemantis
+          # Homebrew no longer installs a formula from a bare file path
+          # ("formulae must be in a tap"); register this checkout as the tap.
+          brew tap node-mantis/tap "$GITHUB_WORKSPACE"
+          brew install --formula node-mantis/tap/nodemantis
+          brew test node-mantis/tap/nodemantis
+          nodemantis --version
