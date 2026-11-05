@@ -26,10 +26,11 @@ class Nodemantis < Formula
 
   def caveats
     <<~EOS
-      Configure credentials and install a browser once:
+      NodeMantis drives your installed Google Chrome. Configure credentials once:
         nodemantis configure --api-key "sk_live_<copy-from-dashboard>"
-        nodemantis install-browser
       Verify with: nodemantis doctor
+      If you also installed NodeMantis with npm or pip, the first nodemantis on
+      your PATH runs; nodemantis doctor shows which one that is.
     EOS
   end
 
