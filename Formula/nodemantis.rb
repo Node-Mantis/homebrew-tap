@@ -3,9 +3,9 @@ class Nodemantis < Formula
   homepage "https://github.com/Node-Mantis/CleanSlate"
   # Prerelease versions do not sort reliably from the URL alone: always pin
   # url, version, and sha256 together (scripts/bump.sh does all three).
-  url "https://registry.npmjs.org/node-mantis/-/node-mantis-0.1.0.tgz"
-  version "0.1.0"
-  sha256 "efe595c500cf6f19ebae7190dbbdd2d3268cc960be588ac83b40dac95bbb37a8"
+  url "https://registry.npmjs.org/node-mantis/-/node-mantis-0.1.2.tgz"
+  version "0.1.2"
+  sha256 "c367072a674b197b21f4d310c8f7d953f44accf664f6ece14ee5367ab2ecf78c"
   license :cannot_represent
 
   depends_on "node"
