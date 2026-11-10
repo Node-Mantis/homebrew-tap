@@ -1,6 +1,6 @@
 class Nodemantis < Formula
-  desc "NodeMantis browser-agent CLI"
-  homepage "https://github.com/Node-Mantis/CleanSlate"
+  desc "Automate web tasks in a real Chrome browser with plain-English instructions"
+  homepage "https://nodemantis.com"
   # Prerelease versions do not sort reliably from the URL alone: always pin
   # url, version, and sha256 together (scripts/bump.sh does all three).
   url "https://registry.npmjs.org/node-mantis/-/node-mantis-0.1.2.tgz"

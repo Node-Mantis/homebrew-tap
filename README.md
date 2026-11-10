@@ -1,4 +1,6 @@
-# NodeMantis Homebrew Tap
+# Node Mantis Homebrew Tap
+
+**[Node Mantis](https://nodemantis.com) automates web tasks with AI.** Describe what you want done in plain English, and it carries it out in a real Chrome browser. [Quickstart](https://nodemantis.com/docs/quickstart) · [Docs](https://nodemantis.com/docs) · [Pricing](https://nodemantis.com/pricing). Start with $10 in free credit, no card required.
 
 Homebrew distribution channel for the `nodemantis` CLI. The formula wraps the
 published npm `node-mantis` tarball (Node is the only dependency); it always
