@@ -26,7 +26,12 @@ class Nodemantis < Formula
 
   def caveats
     <<~EOS
-      NodeMantis drives your installed Google Chrome. Configure credentials once:
+      NodeMantis drives your installed Google Chrome. Without one, the first
+      `nodemantis doctor` or `nodemantis run` downloads Chrome for Testing
+      (Google's automation build of Chrome, about 200 MB) into your user cache;
+      run `nodemantis install-browser` to do that now. No admin rights; set
+      NODEMANTIS_SKIP_BROWSER_DOWNLOAD=1 to turn the download off.
+      Configure credentials once:
         nodemantis configure --api-key "sk_live_<copy-from-dashboard>"
       Verify with: nodemantis doctor
       If you also installed NodeMantis with npm or pip, the first nodemantis on

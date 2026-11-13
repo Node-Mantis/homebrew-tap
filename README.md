@@ -9,7 +9,7 @@ matches the npm release exactly.
 ```bash
 brew install node-mantis/tap/nodemantis
 nodemantis configure --api-key "ak_..."
-nodemantis install-browser
+nodemantis install-browser   # optional: only downloads Chrome for Testing if Google Chrome is missing
 nodemantis run "find a 2-bed rental in Lisbon under €1500" --url https://...
 ```
 
