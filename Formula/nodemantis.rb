@@ -3,9 +3,9 @@ class Nodemantis < Formula
   homepage "https://nodemantis.com"
   # Prerelease versions do not sort reliably from the URL alone: always pin
   # url, version, and sha256 together (scripts/bump.sh does all three).
-  url "https://registry.npmjs.org/node-mantis/-/node-mantis-0.1.12.tgz"
-  version "0.1.12"
-  sha256 "81208dce18178ac22e58068ddb0c93ec8c1c3df20284073bfe4387b2801082ef"
+  url "https://registry.npmjs.org/node-mantis/-/node-mantis-0.1.13.tgz"
+  version "0.1.13"
+  sha256 "2519b0d0ba9b48a97b960e6cb969dc935df66f19617cfe8006299641344848d7"
   license :cannot_represent
 
   depends_on "node"
